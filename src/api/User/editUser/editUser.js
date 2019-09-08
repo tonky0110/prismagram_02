@@ -2,25 +2,23 @@ import { prisma } from '../../../../generated/prisma-client';
 
 export default {
 	Mutation: {
-		follow: async (_, args, { request, isAuthenticated }) => {
+		editUser: async (_, args, { request, isAuthenticated }) => {
 			isAuthenticated(request);
 			const { user } = request;
-			const { id } = args;
+			const { username, email, firstName, lastName, bio } = args;
 			try {
-				await prisma.updateUser({
+				return prisma.updateUser({
 					where: { id: user.id },
 					data: {
-						following: {
-							connect: {
-								id
-							}
-						}
+						username,
+						email,
+						firstName,
+						lastName,
+						bio
 					}
 				});
-				return true;
 			} catch (error) {
 				console.log(error);
-				return false;
 			}
 		}
 	}
