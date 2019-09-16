@@ -17,6 +17,17 @@ export const FILE_FRAGMENT = `
     url
 `;
 
+export const MESSAGE_FRAGMENT = `
+    id
+    text
+    to {
+        ${USER_FRAGMENT}
+    }
+    from {
+        ${USER_FRAGMENT}
+    }
+`;
+
 export const FULL_POST_FRAGMENT = `
     fragment PostFragment on Post {
         id
@@ -33,6 +44,9 @@ export const ROOM_FRAGMENT = `
         id
         participants {
             ${USER_FRAGMENT}
+        }
+        messages {
+            ${MESSAGE_FRAGMENT}
         }
     }
 `;
