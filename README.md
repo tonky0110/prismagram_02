@@ -25,7 +25,7 @@ Subscription: 구독, DB의 상태변경을 계속해서 확인.
  - [X] See the feed
  - [X] Send private Message
  - [X] See Rooms
- - [ ] See Room
- - [ ] Receive Message(realtime)
+ - [X] See Room
+ - [X] Receive Message(realtime)
  
  - [ ] See the feed
