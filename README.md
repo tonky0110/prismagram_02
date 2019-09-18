@@ -1,5 +1,8 @@
 # prismagram
 Instagram clone with Express + Prisma + React and React Native
+Query: 단순하게 DB에서 데이터 조회를 할때만 사용.
+Mutation: DB의 데이터를 변경할 때 사용(Update, Delete, Insert)
+Subscription: 구독, DB의 상태변경을 계속해서 확인.
 
 
 ## Use Stories
